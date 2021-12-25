@@ -41,6 +41,12 @@ setup_api_gateway_and_lambda:
 	terraform plan -out=terraform.tfplan && \
 	terraform apply terraform.tfplan
 
+setup_ecr:
+	cd ./base-infra/ecr && \
+	terraform init -reconfigure && \
+	terraform plan -out=terraform.tfplan && \
+	terraform apply terraform.tfplan
+
 check_a:
 ifndef a
 	$(error a is undefined)
