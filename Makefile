@@ -47,6 +47,12 @@ setup_ecr:
 	terraform plan -out=terraform.tfplan && \
 	terraform apply terraform.tfplan
 
+setup_eks:
+	cd ./base-infra/eks && \
+	terraform init -reconfigure && \
+	terraform plan -out=terraform.tfplan && \
+	terraform apply terraform.tfplan
+
 check_a:
 ifndef a
 	$(error a is undefined)
