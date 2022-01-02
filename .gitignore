@@ -1,4 +1,5 @@
+# idea
 .idea
-#  Local .terraform directories
+# Local .terraform directories
 *.terraform/
-#base-infra/ecr/.terraform
+# base-infra/ecr/.terraform
